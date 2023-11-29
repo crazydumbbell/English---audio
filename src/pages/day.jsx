@@ -3,6 +3,9 @@ import englishData from "../englishData.json";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { RiArrowDropRightFill } from "react-icons/ri";
+import { RiArrowDropLeftFill } from "react-icons/ri";
+import { FaRegPlayCircle } from "react-icons/fa";
 
 console.log(process.env.REACT_APP_API_KEY);
 
@@ -99,14 +102,14 @@ const Day = () => {
   // useParams의 day도 있고 dailyData의 day도 있음 우리가 건드는것은 params의 day
 
   return (
-    <div className="bg-red-100 container relative">
+    <div className="container relative">
       <div className="absolute top-0 left-0 p-8">
         <Link to="/" className="btn-style">
           Back
         </Link>
       </div>
 
-      <h1 className="text-center text-2xl font-semibold">
+      <h1 className="text-center text-2xl font-semibold font-jjjj">
         Day {dailyData.day} - {dailyData.title}
       </h1>
       <div className="mt-12">
@@ -123,13 +126,13 @@ const Day = () => {
         </button>
         <div className="mt-4">
           <button className="btn-style" onClick={onClickPrev}>
-            Prev
+            <RiArrowDropLeftFill />
           </button>
           <button className="btn-style " onClick={onClickNext}>
-            Next
+            <RiArrowDropRightFill />
           </button>
           <button className="btn-style" onClick={onClickSound}>
-            Sound
+            <FaRegPlayCircle />
           </button>
         </div>
       </div>
