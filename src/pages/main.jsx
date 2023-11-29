@@ -1,21 +1,9 @@
 import MainCard from "../components/MainCard";
 import englishData from "../englishData.json";
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 console.log(englishData);
 
 const Main = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   return (
     <div className="bg-green-500 min-h-screen max-w-screen-md mx-auto px-8 mt-20 rounded-full flex flex-col justify-center items-center gap-20 shadow-2xl">
       <div className="text-7xl font-extrabold text-yellow-500 font-kkkk">
